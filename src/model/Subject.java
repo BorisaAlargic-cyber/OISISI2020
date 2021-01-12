@@ -17,8 +17,8 @@ public class Subject implements Serializable {
 	private Semestar semestar;
 	private CurrentYear yearOfListening;
 	private Professor professor;
-	private List<Student> listOfStudents;
-	
+	private List<Student> listOfStudentsPassed;
+	private List<Student> listOfStudentsFailed;
 	public Subject(String idOfSubject, String nameOfSubject, Semestar semestar, CurrentYear yearOfListening,
 			Professor professor) {
 		super();
@@ -27,17 +27,35 @@ public class Subject implements Serializable {
 		this.semestar = semestar;
 		this.yearOfListening = yearOfListening;
 		this.professor = professor;
-		this.listOfStudents = new ArrayList<Student>();
+		this.listOfStudentsPassed = new ArrayList<Student>();
+		this.listOfStudentsFailed= new ArrayList<Student>();
 	}
 
 	public Subject() 
 	{
 		// TODO Auto-generated constructor stub
-		this.listOfStudents= new ArrayList<Student>();
+		this.listOfStudentsPassed= new ArrayList<Student>();
+		this.listOfStudentsFailed= new ArrayList<Student>();
 	}
 
 	public String getIdOfSubject() {
 		return idOfSubject;
+	}
+	
+	public List<Student> getListOfStudentsPassed() {
+		return listOfStudentsPassed;
+	}
+
+	public void setListOfStudentsPassed(List<Student> listOfStudentsPassed) {
+		this.listOfStudentsPassed = listOfStudentsPassed;
+	}
+
+	public List<Student> getListOfStudentsFailed() {
+		return listOfStudentsFailed;
+	}
+
+	public void setListOfStudentsFailed(List<Student> listOfStudentsFailed) {
+		this.listOfStudentsFailed = listOfStudentsFailed;
 	}
 
 	public void setIdOfSubject(String idOfSubject) {
@@ -76,12 +94,12 @@ public class Subject implements Serializable {
 		this.professor = professor;
 	}
 
-	public List<Student> getListOfStudents() {
-		return listOfStudents;
+	public List<Student> getlistOfStudentsPassed() {
+		return listOfStudentsPassed;
 	}
 
-	public void setListOfStudents(List<Student> listOfStudents) {
-		this.listOfStudents = listOfStudents;
+	public void setlistOfStudentsPassed(List<Student> listOfStudentsPassed) {
+		this.listOfStudentsPassed = listOfStudentsPassed;
 	}
 	
 	

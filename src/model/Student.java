@@ -24,7 +24,7 @@ public class Student implements Serializable {
 	private CurrentYear currentYear;
 	private Status status;
 	private float avrageMark;
-	//private List<Subject> listOfSubjects;
+	private List<Subject> listOfSubjects;
 	
 	public Student(String firstName, String lastName, LocalDate dateOfBirth, String homeAdress, String telefoneNumber,
 			String emailAdress, String indexNum, LocalDate signUpDate, CurrentYear currentYear, Status status,
