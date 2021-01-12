@@ -118,7 +118,6 @@ public class WorkSpace extends JPanel
 		tabbedPane.add("Students",studentsPanel);
 		tabbedPane.add("Professors",professorPanel);
 		tabbedPane.add("Subjects",subjectPanel);
-		
 		this.add(tabbedPane,BorderLayout.CENTER);
 	}
 	
