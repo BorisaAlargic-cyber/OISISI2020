@@ -7,6 +7,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
+import controller.WindowListener;
 import model.Model;
 
 public class MainWindow extends JFrame
@@ -42,7 +43,7 @@ public class MainWindow extends JFrame
 	{
 		
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
+		this.addWindowListener(new WindowListener());
 		this.setLayout(new BorderLayout());
 		this.setTitle("STUDENTSKA SLUZBA");
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
