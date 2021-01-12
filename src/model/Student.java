@@ -28,6 +28,7 @@ public class Student implements Serializable {
 	private Status status;
 	private float avrageMark;
 	private List<Subject> listOfSubjects;
+	private List<Ocena> listOfGrades;
 	
 	public Student(String firstName, String lastName, LocalDate dateOfBirth, String homeAdress, String telefoneNumber,
 			String emailAdress, String indexNum, LocalDate signUpDate, CurrentYear currentYear, Status status,
@@ -44,10 +45,36 @@ public class Student implements Serializable {
 		this.currentYear = currentYear;
 		this.status = status;
 		this.avrageMark = avrageMark;
-	//	this.listOfSubjects= new ArrayList<Subject>();
-		
+		this.listOfSubjects= new ArrayList<Subject>();
+		this.listOfGrades= new ArrayList<Ocena>();
 		
 	}
+	
+	
+
+	public List<Subject> getListOfSubjects() {
+		return listOfSubjects;
+	}
+
+
+
+	public void setListOfSubjects(List<Subject> listOfSubjects) {
+		this.listOfSubjects = listOfSubjects;
+	}
+
+
+
+	public List<Ocena> getListOfGrades() {
+		return listOfGrades;
+	}
+
+
+
+	public void setListOfGrades(List<Ocena> listOfGrades) {
+		this.listOfGrades = listOfGrades;
+	}
+
+
 
 	public Student() {
 		// TODO Auto-generated constructor stub
