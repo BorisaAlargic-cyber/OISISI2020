@@ -1,5 +1,7 @@
 package model;
 
+import javax.swing.UIManager;
+
 import view.MainWindow;
 
 public class Main {
@@ -8,7 +10,17 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		
-		MainWindow.getInstance().show();
+		  try { 
+        	  
+	            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel"); 
+	        } 
+	        catch (Exception e) { 
+	            System.out.println("Look and Feel problem"); 
+	        } 
+	        
+	        
+	        
+			MainWindow.getInstance();
 
 	}
 
