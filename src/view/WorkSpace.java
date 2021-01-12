@@ -9,6 +9,10 @@ import javax.swing.JTable;
 import javax.swing.event.ChangeListener;
 import javax.swing.table.DefaultTableModel;
 
+import model.Professor;
+import model.Student;
+import model.Subject;
+
 public class WorkSpace extends JPanel
 {
 	private static JTable tableStudents;
@@ -60,6 +64,68 @@ public class WorkSpace extends JPanel
 		tabbedPane.add("Subjects",subjectPanel);
 		
 		this.add(tabbedPane,BorderLayout.CENTER);
+	}
+	
+	public static void initializeStudentTable()
+	{
+		for(Student s:MainWindow.getInstance().getModel().getListOfStudent()) 
+		{
+			
+			Object[] data={
+		    s.getIndexNum(),
+			s.getFirstName(),
+			s.getLastName(),
+			s.getCurrentYear(),
+			s.getStatus(),
+			s.getAvrageMark()
+			};
+			modelTableStudents.insertRow(0, data);
+			
+		}
+	}
+	public static void initializeProfessorTable()
+	{
+		for(Professor p : MainWindow.getInstance().getModel().getListOfProfessor())
+		{
+			Object[] data= {
+					p.getFirstName(),
+					p.getLastName(),
+					p.getWorkAdress(),
+					p.getTitle()
+			};
+			modelTableProfessors.insertRow(0,data );
+		}
+	}
+	
+	public static void initializeSubjectTable()
+	{
+		for(Subject s : MainWindow.getInstance().getModel().getListOfSubject() )
+		{
+			if(s.getProfessor() !=null)
+			{
+				Object[] data= {
+						s.getIdOfSubject(),
+						s.getNameOfSubject(),
+						s.getSemestar(),
+						s.getYearOfListening(),
+						s.getProfessor().getFirstName()+ " "+s.getProfessor().getLastName(),
+						"Show"
+				};
+				modelTableSubjects.insertRow(0, data);
+			}
+			else
+			{
+				Object[] data = {
+						s.getIdOfSubject(),
+						s.getNameOfSubject(),
+						s.getSemestar(),
+						s.getYearOfListening(),
+						"None",
+						"Show"
+				};
+				modelTableSubjects.insertRow(0, data);
+			}
+		}
 	}
 
 }

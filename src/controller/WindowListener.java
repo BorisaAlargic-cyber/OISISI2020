@@ -13,4 +13,12 @@ public class WindowListener extends WindowAdapter
 		Serialiaze.serialiaze();
 	}
 
+	public void windowOpened(WindowEvent e)
+	{
+		System.out.println("WIndow opening recevied");
+		Serialiaze.deserialiaze();
+		view.WorkSpace.initializeStudentTable();
+		view.WorkSpace.initializeSubjectTable();
+		view.WorkSpace.initializeProfessorTable();
+	}
 }
