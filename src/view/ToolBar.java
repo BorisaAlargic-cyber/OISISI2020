@@ -14,31 +14,10 @@ import javax.swing.JToolBar;
 
 public class ToolBar extends JToolBar
 {
-	public static JButton getBtnAddStudent() {
-		return btnAddStudent;
-	}
-
-
-	public static void setBtnAddStudent(JButton btnAddStudent) {
-		ToolBar.btnAddStudent = btnAddStudent;
-	}
-
-
-	public static JButton getBtnAddProfessor() {
-		return btnAddProfessor;
-	}
-
-
-	public static void setBtnAddProfessor(JButton btnAddProfessor) {
-		ToolBar.btnAddProfessor = btnAddProfessor;
-	}
-
-
+	
 	public static final long serialVersionUID=78654324567L;
 	
-	private static JButton btnAddStudent;
-	private static JButton btnAddProfessor;
-	private static JButton btnDeleteProfessor;
+
 	
 	
 	public ToolBar() 
@@ -53,22 +32,10 @@ public class ToolBar extends JToolBar
 		JButton btnAddNewEntity= new JButton("Add");
 		//TODO bind Actions
 		JButton btnEditEntity= new JButton("Edit");
-		
 		JButton btnDeleteEntity= new JButton("Delete");
-		btnAddStudent= new JButton("temp1");
-		btnAddProfessor= new JButton("temp2");
-		//TODO
-		btnDeleteProfessor= new JButton("temp3");
 		buttons.add(btnAddNewEntity);
 		buttons.add(btnEditEntity);
-		buttons.add(btnDeleteEntity);
-		buttons.add(btnAddStudent);
-		buttons.add(btnAddProfessor);
-		buttons.add(btnDeleteProfessor);
-		
-	
-		
-	    
+		buttons.add(btnDeleteEntity);    
 	    JPanel pnlSearch= new JPanel();
 	    pnlSearch.setLayout(new FlowLayout(FlowLayout.RIGHT));
 	    JTextField tfSearch= new JTextField();
@@ -92,15 +59,7 @@ public class ToolBar extends JToolBar
 	}
 
 
-	public static JButton getBtnDeleteProfessor() {
-		return btnDeleteProfessor;
-	}
 
-
-	public static void setBtnDeleteProfessor(JButton btnDeleteProfessor) {
-		ToolBar.btnDeleteProfessor = btnDeleteProfessor;
-	}
-	
 	
 
 }
