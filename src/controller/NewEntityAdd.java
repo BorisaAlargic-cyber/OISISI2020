@@ -6,6 +6,7 @@ import javax.swing.AbstractAction;
 
 import view.NewProfessorWindow;
 import view.NewStudentWindow;
+import view.NewSubjectWindow;
 import view.WorkSpace;
 
 public class NewEntityAdd extends AbstractAction
@@ -36,6 +37,8 @@ public class NewEntityAdd extends AbstractAction
 		}
 		 else
 		 {
+			 NewSubjectWindow.getInstance().show();
+			 NewSubjectWindow.getInstance().getBtnEdit().setVisible(false);
 			
 		 }
 		

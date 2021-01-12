@@ -16,6 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
+import controller.NewSubjectAdd;
+
 
 
 public class NewSubjectWindow extends JFrame
@@ -164,7 +166,7 @@ public class NewSubjectWindow extends JFrame
 		txtNameOfSubject.setPreferredSize(new Dimension(300,30));
 		
 		
-		btnAdd = new JButton("Save");
+		btnAdd = new JButton(new NewSubjectAdd());
 		btnEdit = new JButton("Save edited");
 		btnCancel = new JButton("Cancel");
 		
