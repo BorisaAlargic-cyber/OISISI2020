@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
+import controller.NewEntityAdd;
+
 public class ToolBar extends JToolBar
 {
 	
@@ -29,7 +31,7 @@ public class ToolBar extends JToolBar
 		JPanel buttons= new JPanel();
 		buttons.setLayout(new FlowLayout(FlowLayout.LEFT));
 		//TODO bind Actions
-		JButton btnAddNewEntity= new JButton("Add");
+		JButton btnAddNewEntity= new JButton(new NewEntityAdd());
 		//TODO bind Actions
 		JButton btnEditEntity= new JButton("Edit");
 		JButton btnDeleteEntity= new JButton("Delete");

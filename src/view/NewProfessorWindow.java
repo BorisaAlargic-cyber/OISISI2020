@@ -14,6 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import controller.NewProfessorAdd;
+
 public class NewProfessorWindow extends JFrame
 {
 
@@ -66,7 +68,7 @@ public class NewProfessorWindow extends JFrame
 		lblIdNum = new JLabel("Id number");
 		lblTitle = new JLabel("Title");
 		lblPosition = new JLabel("Position");
-		btnAdd = new JButton("Dodaj");
+		btnAdd = new JButton(new NewProfessorAdd());
 		btnCancel = new JButton("Cancel");
 		btnCancel.addActionListener(new ActionListener() {
 

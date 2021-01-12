@@ -24,6 +24,62 @@ public class WorkSpace extends JPanel
 	private static DefaultTableModel modelTableSubjects;
 	
 	
+	public static JTable getTableStudents() {
+		return tableStudents;
+	}
+
+	public static void setTableStudents(JTable tableStudents) {
+		WorkSpace.tableStudents = tableStudents;
+	}
+
+	public static JTable getTableProfessors() {
+		return tableProfessors;
+	}
+
+	public static void setTableProfessors(JTable tableProfessors) {
+		WorkSpace.tableProfessors = tableProfessors;
+	}
+
+	public static JTable getTableSubjects() {
+		return tableSubjects;
+	}
+
+	public static void setTableSubjects(JTable tableSubjects) {
+		WorkSpace.tableSubjects = tableSubjects;
+	}
+
+	public static JTabbedPane getTabbedPane() {
+		return tabbedPane;
+	}
+
+	public static void setTabbedPane(JTabbedPane tabbedPane) {
+		WorkSpace.tabbedPane = tabbedPane;
+	}
+
+	public static DefaultTableModel getModelTableStudents() {
+		return modelTableStudents;
+	}
+
+	public static void setModelTableStudents(DefaultTableModel modelTableStudents) {
+		WorkSpace.modelTableStudents = modelTableStudents;
+	}
+
+	public static DefaultTableModel getModelTableProfessors() {
+		return modelTableProfessors;
+	}
+
+	public static void setModelTableProfessors(DefaultTableModel modelTableProfessors) {
+		WorkSpace.modelTableProfessors = modelTableProfessors;
+	}
+
+	public static DefaultTableModel getModelTableSubjects() {
+		return modelTableSubjects;
+	}
+
+	public static void setModelTableSubjects(DefaultTableModel modelTableSubjects) {
+		WorkSpace.modelTableSubjects = modelTableSubjects;
+	}
+
 	public WorkSpace() 
 	{
 		this.setLayout(new BorderLayout());
