@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import enums.CurrentYear;
+import enums.Semestar;
 
 public class Subject implements Serializable {
 	/**
