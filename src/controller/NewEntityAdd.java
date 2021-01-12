@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
 import view.NewProfessorWindow;
+import view.NewStudentWindow;
 import view.WorkSpace;
 
 public class NewEntityAdd extends AbstractAction
@@ -24,7 +25,9 @@ public class NewEntityAdd extends AbstractAction
 		int index=WorkSpace.getTabbedPane().getSelectedIndex();
 		if(index==0) 
 		{
-		
+			NewStudentWindow.getInstance().show();
+			NewStudentWindow.getInstance().getBtnEdit().setVisible(false);
+			NewStudentWindow.getInstance().getBtnSave().setVisible(true);
 		}
 		 else if (index==1)
 		{
